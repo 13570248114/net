@@ -5,7 +5,7 @@ net是仿照muduo[1]实现的一个基于Reactor模式的多线程C++网络库�
 
 - 多线程依赖于C++11提供的std::thread库，而不是重新封装POSIX thread API。
 
-- 定时器依赖于C++11提供的std::chrono库，而不是自己实现Timstamp类，也不用直接调用`gettimeofday()`。这样写的好处之一是我们不必再为定时器API的时间单位操心[2]：
+- 定时器依赖于C++11提供的std::chrono库，而不是自己实现Timstamp类，也不用直接调用`gettimeofday()`。这样写的好处之一是我们不必再为定时器API的时间单位操心：
 
   ```c++
   using namespace std::literals::chrono_literals;
